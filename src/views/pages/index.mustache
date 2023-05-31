@@ -1,14 +1,14 @@
 {{>includes/header}}
-<main class="pokemon grid grid-cols-1 md:grid-cols-4 place-items-center gap-4 bg-indigo-300 p-2">
-    <nav class="nav w-full h-20 p-2 md:p-0 list-none gap-2 flex justify-around items-center  bg-indigo-400 md:col-span-4 ">
-        <li class="list-li"><a href="/">Todos</a></li>
-        <li class="list-li"><a href="/kanto">Kanto</a></li>
-        <li class="list-li"><a href="/johto">Johto</a></li>
-        <li class="list-li"><a href="/hoenn">Hoenn</a></li>
-        <li class="list-li"><a href="/sinnoh">Sinnoh</a></li>
+<main class="pokemon grid grid-cols-1 md:grid-cols-4 place-items-center gap-4 bg-violet-900">
+    <nav class="nav w-full h-20 p-2 md:p-0 list-none gap-2 flex justify-around items-center  bg-indigo-600 md:col-span-4 ">
+        <li class="list-li {{#menu.all}}active{{/menu.all}}"><a href="/">Todos</a></li>
+        <li class="list-li {{#menu.kanto}}active{{/menu.kanto}}"><a href="/kanto">Kanto</a></li>
+        <li class="list-li {{#menu.johto}}active{{/menu.johto}}"><a href="/johto">Johto</a></li>
+        <li class="list-li {{#menu.hoenn}}active{{/menu.hoenn}}"><a href="/hoenn">Hoenn</a></li>
+        <li class="list-li {{#menu.sinnoh}}active{{/menu.sinnoh}}"><a href="/sinnoh">Sinnoh</a></li>
     </nav>
     <div class="colspan-1 md:col-span-4"> 
-        <h1 class="font-semibold text-base md:text-xl p-0 md:p-4"> {{title}} </h1>    
+        <h1 class="font-semibold text-base text-white md:text-xl p-0 md:p-4"> {{title}} </h1>    
     </div>
     {{#list}}
     <div class="card">

@@ -4,7 +4,7 @@
 
 @layer components {
     .card{
-        @apply w-44 lg:w-60 bg-teal-300 p-4;       
+        @apply w-44 lg:w-60 bg-indigo-600 text-white font-semibold p-4 rounded-md;       
     }
 
     .img-size {
@@ -12,6 +12,10 @@
     }
     
     .list-li {
-        @apply bg-indigo-300 w-44 lg:w-60 py-2 text-base md:text-xl text-center font-semibold rounded;
+        @apply text-white w-44 lg:w-60 py-2 text-base md:text-xl text-center font-semibold rounded;
+    }
+
+    .active {
+        @apply bg-indigo-700 font-bold
     }
 }

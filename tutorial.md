@@ -6,19 +6,26 @@ filtrar todo o objeto por tipos. data.filter item.type === type return true
 filtrar todo o objeto por nomes. data.filter item.type.toLowerCase() === type.toLowerCase() return true
 filtrar todo o objeto por região (offset - limit ).
 
-# https://pokeapi.co/api/v2/pokemon-species/39/
-for(let id = 1; id <= 150; id++) {
-    async function load(dex) {
-      let data = await fetch(`https://pokeapi.co/api/v2/pokemon/${dex}`)
-      let res = await data.json()
-      return res
-    }
-    load(id).then((res)=> {
-      console.log(res.sprites.front_default)
-    })
-}
 
-#
+
+<!-- -> Menos codigo mas mais lento:
+type Pokemon_info = { nome: string, id:number, url: string }
+let data: Pokemon_info[] = [];
+        for(let index = 1; index <= 150; index++) {
+            let urlFetch = await fetch(`https://pokeapi.co/api/v2/pokemon/${index}`);
+            let results = await urlFetch.json();
+
+            let pokemon:Pokemon_info = {
+                nome: results.name,
+                id: results.id,
+                url: results.sprites.front_default,
+            }
+            data.push(pokemon)
+        }
+        return data 
+        
+        -->
+
 
 <!-- ! teste com a pokedex - Aqui tem um array de johto 
 let data = [
